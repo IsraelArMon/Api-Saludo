@@ -34,6 +34,10 @@ public class Saludo {
 		this.tipo_saludo = createSaludoRequest.getTipo_saludo();
 		this.saludo = createSaludoRequest.getSaludo();
 	}
-	
+
+	@Override
+	public String toString() {
+		return  saludo;
+	}
 	
 }

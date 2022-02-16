@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "64d59b16-c7bb-4d2a-878d-021eb67bfb2b",
+		"name": "Saludos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateSaludo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipo_saludo\" : \"noche\",\r\n    \"saludo\" : \"hola buenas noches\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/saludo/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"saludo",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ErrorSaludoExistente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"tipo_saludo\" : \"noche\",\r\n    \"saludo\" : \"hola buenas noches\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/saludo/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"saludo",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerTodosSaludos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/saludo/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"saludo",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/saludo/findByType/mañana",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"saludo",
+						"findByType",
+						"mañana"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

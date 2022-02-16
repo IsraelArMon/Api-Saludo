@@ -34,6 +34,11 @@ public class SaludoController {
 		return saludoService.byTypeSaludos(tipo_saludo);
 	}
 	
+	@GetMapping("/findByTipo/{tipo_saludo}")
+	public String getByTipo(@PathVariable String tipo_saludo){
+		return saludoService.byTypeSaludos(tipo_saludo).getSaludo();
+	}
+	
 	@PostMapping("/create")
 	public Saludo create(@RequestBody Saludo saludo) {
 		return saludoService.createSaludo(saludo);
